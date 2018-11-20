@@ -21,3 +21,13 @@ except ValueError as e:
 
 #### TODO
 Make small random math calculations
+
+
+
+#### Ressources used:
+- https://stackoverflow.com/questions/7370801/measure-time-elapsed-in-python
+- https://stackoverflow.com/questions/3309664/python-timer-countdown
+- https://docs.python.org/3.5/library/functions.html#round
+- https://stackoverflow.com/questions/9522446/why-do-i-get-an-error-when-i-call-intinput-where-input-is-decimal-eg-87-9
+- https://stackoverflow.com/questions/379906/how-do-i-parse-a-string-to-a-float-or-int-in-python
+- https://stackoverflow.com/questions/510972/getting-the-class-name-of-an-instance
