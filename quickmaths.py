@@ -10,13 +10,17 @@ from threading import Timer
 
 #Start timer
 start = time.time()
-
+try:
+    number = int(input("Write something: ",))
+except ValueError as e:
+    print("NaN")
+'''
 def check_if_number():
-    if int(float(input("Write something: ",))) == True:
+    if number == int():
         return check_if_number()
     else:
         return "NaN"
-
+'''
 #End timer
 end =  time.time()
 
