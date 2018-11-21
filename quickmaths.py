@@ -1,26 +1,28 @@
 '''
--------------
+----------------------------------
 The goal of the game is to calculate FAST!, not correct, but fast
--------------
+----------------------------------
 '''
 import math
 import numpy
 import time
-from threading import Timer
+import random
+
+number1 = random.randrange(1,9,1) #Last number is step
+number2 = random.randrange(1,9,1)
+
+print("What is",number1,"+",number2,"?")
+sum1 = number1 + number2
 
 #Start timer
 start = time.time()
+
+#Check if non integer and throw error if not
 try:
     number = int(input("Write something: ",))
 except ValueError as e:
     print("NaN")
-'''
-def check_if_number():
-    if number == int():
-        return check_if_number()
-    else:
-        return "NaN"
-'''
+
 #End timer
 end =  time.time()
 
