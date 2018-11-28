@@ -51,7 +51,7 @@ except ValueError as e:
 time_end =  time.time()
 
 #Round up timer to 3 decimals.
-rounded_number = round(end-start, 3)
+rounded_number = round(time_end-time_start, 3)
 print("Calculation took", rounded_number, "ms.") # print output
 
 #check answer
