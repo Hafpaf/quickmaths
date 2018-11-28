@@ -2,14 +2,17 @@
 ----------------------------------
 The goal of the game is to calculate FAST!, not correct, but fast
 ----------------------------------
+TODO:
+- Stop at NaN
+- Check answer on calculation
 '''
 import math
-import numpy
+import numpy as np
 import time
-import random
+from random import randrange
 
-number1 = random.randrange(1,9,1) #Last number is step
-number2 = random.randrange(1,9,1)
+number1 = randrange(1,9,1) #Last number is step
+number2 = randrange(1,9,1)
 
 print("What is",number1,"+",number2,"?")
 sum1 = number1 + number2
