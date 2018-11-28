@@ -50,21 +50,36 @@ except ValueError as e:
 #End timer
 time_end =  time.time()
 
+print(" ")
+
 #Round up timer to 3 decimals.
 rounded_number = round(time_end-time_start, 3)
 print("Calculation took", rounded_number, "ms.") # print output
 
 #check answer
 def check_answer():
-    if number == sum1:
-        return time_taken_to_answer()
+    if type == "+":
+        if number == sum1:
+            return time_taken_to_answer()
+        else:
+            return ("Wrong answer")
+    if type == "-":
+        if number == sum2:
+            return time_taken_to_answer()
+        else:
+            return ("Wrong answer")
+    if type == "*":
+        if number == sum3:
+            return time_taken_to_answer()
+        else:
+            return ("Wrong answer")
     else:
-        return ("Wrong answer")
+        return ("NaN2")
 
 #Check time taken to answer
 def time_taken_to_answer():
     if rounded_number > 3.5:
-        return "Too slow"
+        return "Correct but too slow"
     elif rounded_number < 3.5:
         return "Your math skill is pretty fast boi"
     else:
