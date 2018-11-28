@@ -14,7 +14,7 @@ from random import randrange
 number1 = randrange(1,9,1) #Last number is step
 number2 = randrange(1,9,1)
 
-type = input("Choose type: +, -, *", )
+type = input("Choose type: +, -, * ", )
 
 input_plus = "+"
 input_minus = "-"
@@ -22,11 +22,12 @@ input_times = "*"
 
 def init_input():
     if type == "+":
-        return ("What is",number1, input_plus ,number2,"?")
+        return "What is " + str(number1) + " " + str(input_plus) + " " + str(number2) + "?"
     if type == "-":
-        return ("What is",number1, input_minus ,number2,"?")
+        return "What is " + str(number1) + " " + str(input_minus) + " " + str(number2) + "?"
     if type == "*":
-        return ("What is",number1, input_times ,number2,"?")
+        return "What is " + str(number1) + " " + str(input_times) + " " + str(number2) + "?"
+
 sum1 = number1 + number2
 sum2 = number1 - number2
 sum3 = number1 * number2
