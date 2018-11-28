@@ -11,6 +11,7 @@ import numpy as np
 import time
 from random import randrange
 
+#generate random number
 number1 = randrange(1,9,1) #Last number is step
 number2 = randrange(1,9,1)
 
@@ -31,13 +32,10 @@ def init_input():
 sum1 = number1 + number2
 sum2 = number1 - number2
 sum3 = number1 * number2
-'''
-def the_input():
-    if
-'''
+
 print(init_input())
 #Start timer
-start = time.time()
+time_start = time.time()
 
 
 #print("What is",number1,"+",number2,"?")
@@ -45,12 +43,12 @@ start = time.time()
 
 #Check if non integer and throw error if not
 try:
-    number = int(input("Calculation: ",))
+    number = int(input("Answer: ",))
 except ValueError as e:
     print("NaN")
 
 #End timer
-end =  time.time()
+time_end =  time.time()
 
 #Round up timer to 3 decimals.
 rounded_number = round(end-start, 3)
