@@ -86,4 +86,13 @@ def time_taken_to_answer():
         return None
 
 print(check_answer())
-exit()
+print(" ")
+
+run_again = input("Run again?, y or n: ", )
+def run_program_again():
+    if run_again == "y":
+        return type
+    if run_again == "n":
+        return exit()
+    else:
+        exit()
