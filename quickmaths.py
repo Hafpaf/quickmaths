@@ -6,7 +6,7 @@ TODO:
 - Make different kind of questions
 - Print to text file
 '''
-import math
+#import math
 import numpy as np
 import time
 from random import randrange
@@ -15,7 +15,7 @@ from random import randrange
 number1 = randrange(1,9,1) #Last number is step
 number2 = randrange(1,9,1)
 
-type = input("Choose type: +, -, * ", )
+type = input("Choose type: + | - | * : ", )
 
 input_plus = "+"
 input_minus = "-"
@@ -29,6 +29,7 @@ def init_input():
     if type == "*":
         return "What is " + str(number1) + " " + str(input_times) + " " + str(number2) + "?"
 
+#The program calculates the answer
 sum1 = number1 + number2
 sum2 = number1 - number2
 sum3 = number1 * number2
@@ -56,7 +57,7 @@ print(" ")
 rounded_number = round(time_end-time_start, 3)
 print("Calculation took", rounded_number, "ms.") # print output
 
-#check answer
+#check answer type and answer
 def check_answer():
     if type == "+":
         if number == sum1:
@@ -79,7 +80,7 @@ def check_answer():
 #Check time taken to answer
 def time_taken_to_answer():
     if rounded_number > 3.5:
-        return "Correct but too slow"
+        return "Correct, but too slow"
     elif rounded_number < 3.5:
         return "Your math skill is pretty fast boi"
     else:
