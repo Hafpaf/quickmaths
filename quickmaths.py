@@ -89,11 +89,17 @@ def time_taken_to_answer():
 print(check_answer())
 print(" ")
 
-run_again = input("Run again?, y or n: ", )
+
 def run_program_again():
-    if run_again == "y":
-        return type
-    if run_again == "n":
-        return exit()
-    else:
-        exit()
+    while True:
+        run_again = input("Run again?, y or n: ", )
+        if run_again not in {"y","n"}:
+        if run_again == "y":
+            return input("Choose type: + | - | * : ", )
+            return init_input()
+        if run_again == "n":
+                return exit()
+            else:
+                return "not withing the given answers"
+                exit()
+print(run_program_again())
