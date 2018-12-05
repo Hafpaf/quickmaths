@@ -89,13 +89,15 @@ def time_taken_to_answer():
 print(check_answer())
 print(" ")
 
-
 def run_program_again():
     while True:
         run_again = input("Run again?, y or n: ", )
         if run_again == "y":
             return input("Choose type: + | - | * : ", )
-            return init_input()
+            init_input()
+            return ("Calculation took", rounded_number, "ms.")
+            check_answer()
+            time_taken_to_answer()
         if run_again == "n":
                 return exit()
         else:
