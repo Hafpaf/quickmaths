@@ -9,6 +9,9 @@ A little game with the goal to calculate simpel math equations fast.
 
 ### The code includes these libaries:
 - time
+- numpy
+- random
+- math
 
 ### Check if non integer and throw error if not
 '''
@@ -20,8 +23,11 @@ except ValueError as e:
 
 
 #### TODO
-Make small random math calculations
-
+- ~~Make small random math calculations~~
+- Run again
+- Make different kind of questions
+- Print to text file
+- Make it run faster on 2nd try
 
 
 #### Ressources used:
