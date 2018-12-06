@@ -1,8 +1,9 @@
 '''
 ----------------------------------
-The goal of the game is to calculate FAST!, not correct, but fast
+The goal of the game is to calculate FAST!
 ----------------------------------
 TODO:
+- Run again
 - Make different kind of questions
 - Print to text file
 '''
@@ -34,7 +35,7 @@ sum1 = number1 + number2
 sum2 = number1 - number2
 sum3 = number1 * number2
 
-print(init_input())
+print(init_input()) #this line prints 3 times!
 #Start timer
 time_start = time.time()
 
@@ -84,7 +85,8 @@ def time_taken_to_answer():
     elif rounded_number < 3.5:
         return "Your math skill is pretty fast boi"
     else:
-        return None
+        return "I got to time_taken_to_answer()"
+#        return None
 
 print(check_answer())
 print(" ")
