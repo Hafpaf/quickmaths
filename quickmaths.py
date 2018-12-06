@@ -12,8 +12,8 @@ import numpy as np
 import time
 from random import randrange
 
-#generate random number
-number1 = randrange(1,9,1) #Last number is step
+#generate pseudo-random numbers
+number1 = randrange(1,9,1) #Last digit is step
 number2 = randrange(1,9,1)
 
 type = input("Choose type: + | - | * : ", )
