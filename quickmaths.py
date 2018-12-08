@@ -17,26 +17,19 @@ from random import randrange
 number1 = randrange(1,9,1) #Last digit is step
 number2 = randrange(1,9,1)
 
-def choose_type():
-    while True:
-        type = input("Choose type: + | - | * : ", )
-        if type not in ["+","-","*"]:
-            return "try again"
-            return True
-        if type in ["+","-","*"]:
-            return False
+type = input("Choose type: + | - | * : ", )
 
 input_plus = "+"
 input_minus = "-"
 input_times = "*"
 
 def init_input():
-    if choose_type() == "+":
+    if type == "+":
         return "What is " + str(number1) + " " + str(input_plus) + " " + str(number2) + "?"
-    if choose_type() == "-":
+    if type == "-":
         return "What is " + str(number1) + " " + str(input_minus) + " " + str(number2) + "?"
-    if choose_type() == "*":
-        return "What is " + str(number1) + " " + str(input_times) + " " + str(number2) + "?"
+    if type == "*":
+return "What is " + str(number1) + " " + str(input_times) + " " + str(number2) + "?"
 
 #The program calculates the answer
 sum1 = number1 + number2
@@ -94,25 +87,7 @@ def time_taken_to_answer():
         return "Very nice"
     else:
         return "I got stopped at time_taken_to_answer()!"
-#        return None
+        return None
 
 print(check_answer())
-print(" ")
-
-def run_program_again():
-    while True:
-        run_again = input("Run again?, y or n: ", )
-        if run_again not in ["y","n"]:
-            return "not valid answer"
-            return True
-        if run_again == "y":
-            return choose_type()
-            return init_input()
-            return check_answer()
-            return time_taken_to_answer()
-        if run_again == "n":
-                return exit()
-        else:
-            return "not within the given answers"
-            exit()
-print(run_program_again())
+exit()
