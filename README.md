@@ -2,7 +2,7 @@
 
 A little game with the goal to calculate simpel math equations fast.
 
-#### Run quickmaths.py to try the Program
+#### Run 'quickmaths.py' to try the program
 
 
 ## Explanation of the code
@@ -21,7 +21,7 @@ except ValueError as e:
 ```
 
 
-#### TODO
+## TODO
 - ~~Make small random math calculations~~
 - Run again
 - ~~Make different kind of questions~~
@@ -32,7 +32,7 @@ except ValueError as e:
 - Run faster on 2nd try
 
 
-#### Ressources used:
+## Ressources used:
 - https://stackoverflow.com/questions/7370801/measure-time-elapsed-in-python
 - https://stackoverflow.com/questions/3309664/python-timer-countdown
 - https://docs.python.org/3.5/library/functions.html#round
