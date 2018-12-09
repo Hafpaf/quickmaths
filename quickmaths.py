@@ -57,6 +57,7 @@ try:
     number = int(input("Answer: ",))
 except ValueError as e:
     print("NaN")
+    exit()
 
 #End timer
 time_end =  time.time()
