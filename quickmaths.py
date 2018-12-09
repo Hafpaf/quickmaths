@@ -18,7 +18,7 @@ number1 = randrange(1,9,1) #Last digit is step
 number2 = randrange(1,9,1)
 
 type = input("Choose type: + | - | * : ", )
-typelist =["+","-","*"]
+typelist =["+","-","*","plus","minus","times"]
 
 #catch answers not within reason
 while type not in typelist:
@@ -32,12 +32,14 @@ input_minus = "-"
 input_times = "*"
 
 def init_input():
-    if type == "+":
+    if type in ("+","plus"): #works just like type == "+", just with more inputs
         return "What is " + str(number1) + " " + str(input_plus) + " " + str(number2) + "?"
-    if type == "-":
+    if type in ("-","minus"): #works just like type == "-"
         return "What is " + str(number1) + " " + str(input_minus) + " " + str(number2) + "?"
-    if type == "*":
+    if type in ("*","times"): #works just like type == "*"
         return "What is " + str(number1) + " " + str(input_times) + " " + str(number2) + "?"
+    else:
+        return "NAN3"
 
 #The program calculates the answer
 sum1 = number1 + number2
@@ -70,17 +72,17 @@ print("Calculation took", rounded_number, "ms.") # print output
 
 #check answer type and answer
 def check_answer():
-    if type == "+":
+    if type in ("+","plus"):
         if number == sum1:
             return time_taken_to_answer()
         else:
             return ("Wrong answer")
-    if type == "-":
+    if type in ("-","minus"):
         if number == sum2:
             return time_taken_to_answer()
         else:
             return ("Wrong answer")
-    if type == "*":
+    if type in ("*","times"):
         if number == sum3:
             return time_taken_to_answer()
         else:
