@@ -22,7 +22,7 @@ typelist =["+","-","*"]
 
 #catch answers not within reason
 while type not in typelist:
-    print("not valid answer")
+    print("Not a valid answer, try again")
     type = input("Choose type: + | - | * : ", )
 
 print("") #make a line break in the terminal output
