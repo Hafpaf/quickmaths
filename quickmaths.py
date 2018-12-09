@@ -29,7 +29,7 @@ def init_input():
     if type == "-":
         return "What is " + str(number1) + " " + str(input_minus) + " " + str(number2) + "?"
     if type == "*":
-return "What is " + str(number1) + " " + str(input_times) + " " + str(number2) + "?"
+        return "What is " + str(number1) + " " + str(input_times) + " " + str(number2) + "?"
 
 #The program calculates the answer
 sum1 = number1 + number2
@@ -61,17 +61,17 @@ print("Calculation took", rounded_number, "ms.") # print output
 
 #check answer type and answer
 def check_answer():
-    if choose_type() == "+":
+    if type == "+":
         if number == sum1:
             return time_taken_to_answer()
         else:
             return ("Wrong answer")
-    if choose_type() == "-":
+    if type == "-":
         if number == sum2:
             return time_taken_to_answer()
         else:
             return ("Wrong answer")
-    if choose_type() == "*":
+    if type == "*":
         if number == sum3:
             return time_taken_to_answer()
         else:
@@ -86,7 +86,6 @@ def time_taken_to_answer():
     elif rounded_number < 3.5:
         return "Very nice"
     else:
-        return "I got stopped at time_taken_to_answer()!"
         return None
 
 print(check_answer())
