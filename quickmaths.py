@@ -8,7 +8,6 @@ TODO:
 - Print to text file
 - Make it run faster on 2nd try
 '''
-#import math
 import numpy as np
 import time
 from random import randrange
@@ -46,13 +45,9 @@ sum1 = number1 + number2
 sum2 = number1 - number2
 sum3 = number1 * number2
 
-print(init_input()) #this line prints 3 times!
+print(init_input()) #print question
 #Start timer
 time_start = time.time()
-
-
-#print("What is",number1,"+",number2,"?")
-#sum1 = number1 + number2
 
 #Check if non integer and throw error if not
 try:
