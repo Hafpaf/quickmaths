@@ -18,6 +18,14 @@ number1 = randrange(1,9,1) #Last digit is step
 number2 = randrange(1,9,1)
 
 type = input("Choose type: + | - | * : ", )
+typelist =["+","-","*"]
+
+#catch answers not within reason
+while type not in typelist:
+    print("not valid answer")
+    type = input("Choose type: + | - | * : ", )
+
+print("") #make a line break in the terminal output
 
 input_plus = "+"
 input_minus = "-"
