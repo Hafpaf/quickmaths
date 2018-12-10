@@ -16,8 +16,8 @@ from random import randrange
 number1 = randrange(1,9,1) #Last digit is step
 number2 = randrange(1,9,1)
 
-type = input("Choose type: + | - | * : ", )
-typelist =["+","-","*","plus","minus","times"]
+type = input("Choose type: + | - | * | / : ", )
+typelist =["+","-","*","/","plus","minus","times","divide"]
 
 #catch answers not within reason
 while type not in typelist:
@@ -29,6 +29,13 @@ print("") #make a line break in the terminal output
 input_plus = "+"
 input_minus = "-"
 input_times = "*"
+input_divide = "/"
+
+#The program calculates the answer
+sum1 = number1 + number2
+sum2 = number1 - number2
+sum3 = number1 * number2
+sum4 = sum3/number1 #make sure the answer is a whole number.
 
 def init_input():
     if type in ("+","plus"): #works just like type == "+", just with more inputs
@@ -37,13 +44,10 @@ def init_input():
         return "What is " + str(number1) + " " + str(input_minus) + " " + str(number2) + "?"
     if type in ("*","times"): #works just like type == "*"
         return "What is " + str(number1) + " " + str(input_times) + " " + str(number2) + "?"
+    if type in ("/","divide"): #works just like type == "*"
+        return "What is " + str(sum3) + " " + str(input_divide) + " " + str(number1) + "?"
     else:
         return "NAN3"
-
-#The program calculates the answer
-sum1 = number1 + number2
-sum2 = number1 - number2
-sum3 = number1 * number2
 
 print(init_input()) #print question
 #Start timer
@@ -62,8 +66,8 @@ time_end =  time.time()
 print(" ")
 
 #Round up timer to 3 decimals.
-rounded_number = round(time_end-time_start, 3)
-print("Calculation took", rounded_number, "sec.") # print output
+rounded_number = round(time_end-time_start, 2)
+print("Your calculation took", rounded_number, "sec.") # print output
 
 #check answer type and answer
 def check_answer():
@@ -79,6 +83,11 @@ def check_answer():
             return ("Wrong answer")
     if type in ("*","times"):
         if number == sum3:
+            return time_taken_to_answer()
+        else:
+            return ("Wrong answer")
+    if type in ("/","divide"):
+        if number == sum4:
             return time_taken_to_answer()
         else:
             return ("Wrong answer")
@@ -101,6 +110,11 @@ def time_taken_to_answer():
         if rounded_number > 5:
             return "Correct, but too slow"
         elif rounded_number <= 5:
+            return "Very nice"
+    if type in ("/","divide"):
+        if rounded_number > 7:
+            return "Correct, but too slow"
+        elif rounded_number <= 7:
             return "Very nice"
     else:
         return None
