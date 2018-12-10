@@ -63,7 +63,7 @@ print(" ")
 
 #Round up timer to 3 decimals.
 rounded_number = round(time_end-time_start, 3)
-print("Calculation took", rounded_number, "ms.") # print output
+print("Calculation took", rounded_number, "sec.") # print output
 
 #check answer type and answer
 def check_answer():
