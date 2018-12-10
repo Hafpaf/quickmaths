@@ -21,7 +21,7 @@ typelist =["+","-","*","/","plus","minus","times","divide"]
 #catch answers not within reason
 while type not in typelist:
     print("Not a valid answer, try again")
-    type = input("Choose type: + | - | * : ", )
+    type = input("Choose type: + | - | * | / : ", )
 
 print("") #make a line break in the terminal output
 
