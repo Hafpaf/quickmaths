@@ -8,7 +8,6 @@ TODO:
 - Print to text file
 - Make it run faster on 2nd try
 '''
-import numpy as np
 import time
 from random import randrange
 
