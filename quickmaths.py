@@ -53,7 +53,7 @@ time_start = time.time()
 try:
     number = int(input("Answer: ",))
 except ValueError as e:
-    print("NaN")
+    print("Not a number") #NaN
     exit()
 
 #End timer
@@ -87,10 +87,21 @@ def check_answer():
 
 #Check time taken to answer
 def time_taken_to_answer():
-    if rounded_number > 3.5:
-        return "Correct, but too slow"
-    elif rounded_number < 3.5:
-        return "Very nice"
+    if type in ("+","plus"):
+        if rounded_number > 3:
+            return "Correct, but too slow"
+        elif rounded_number <= 3:
+            return "Very nice"
+    if type in ("-","minus"):
+        if rounded_number > 4:
+            return "Correct, but too slow"
+        elif rounded_number <= 4:
+            return "Very nice"
+    if type in ("*","times"):
+        if rounded_number > 5:
+            return "Correct, but too slow"
+        elif rounded_number <= 5:
+            return "Very nice"
     else:
         return None
 
