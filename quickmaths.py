@@ -25,11 +25,6 @@ while type not in typelist:
 
 print("") #make a line break in the terminal output
 
-input_plus = "+"
-input_minus = "-"
-input_times = "*"
-input_divide = "/"
-
 #The program calculates the answer
 sum1 = number1 + number2
 sum2 = number1 - number2
@@ -38,13 +33,13 @@ sum4 = sum3/number1 #make sure the answer is a whole number.
 
 def init_input():
     if type in ("+","plus"): #works just like type == "+", just with more inputs
-        return "What is " + str(number1) + " " + str(input_plus) + " " + str(number2) + "?"
+        return "What is " + str(number1) + " + " + str(number2) + "?"
     if type in ("-","minus"): #works just like type == "-"
-        return "What is " + str(number1) + " " + str(input_minus) + " " + str(number2) + "?"
+        return "What is " + str(number1) + " - " + str(number2) + "?"
     if type in ("*","times"): #works just like type == "*"
-        return "What is " + str(number1) + " " + str(input_times) + " " + str(number2) + "?"
+        return "What is " + str(number1) + " * " + str(number2) + "?"
     if type in ("/","divide"): #works just like type == "*"
-        return "What is " + str(sum3) + " " + str(input_divide) + " " + str(number1) + "?"
+        return "What is " + str(sum3) + " / " + str(number1) + "?"
     else:
         return "NAN3"
 
@@ -64,7 +59,7 @@ time_end =  time.time()
 
 print(" ")
 
-#Round up timer to 3 decimals.
+#Round up timer to 2 decimals.
 rounded_number = round(time_end-time_start, 2)
 print("Your calculation took", rounded_number, "sec.") # print output
 
