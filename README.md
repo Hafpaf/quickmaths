@@ -30,6 +30,7 @@ except ValueError as e:
 - Make more kind of questions
 - Print to text file
 - Run faster on 2nd try
+- ~~More/less time dependent on type of question: +,-,*,/~~
 
 
 ## Ressources used:
